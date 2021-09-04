@@ -1,0 +1,394 @@
+:root {
+  --activeStateColor: #daad86;
+  --unactiveStateColor: #bc986a;
+  --font: "Georama", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+.headerContainer {
+  width: 60%;
+  margin: 0% auto;
+  padding: 1% 0;
+}
+
+nav {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  font-variant: small-caps;
+  font-family: var(--font);
+}
+.big {
+  width: 1.5em;
+  height: 1.5em;
+}
+nav ul {
+  display: inline-flex;
+  margin-left: 35%;
+  list-style-type: none;
+  letter-spacing: 0.1rem;
+}
+nav ul li,
+a {
+  color: white;
+  font-size: 1em;
+  padding-top: 1.7rem;
+  margin: 0 7%;
+  cursor: pointer;
+  transition: ease-in-out 100ms;
+}
+nav ul li,
+a:hover,
+nav ul li,
+a:active,
+nav ul li,
+a:focus {
+  color: var(--unactiveStateColor);
+}
+
+nav p {
+  font-size: 2.5em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  word-spacing: 10%;
+}
+
+.headerContent {
+  width: 60%;
+  margin: 20% 0;
+  font-family: var(--font);
+  color: white;
+  letter-spacing: 0.2rem;
+}
+.headerContent p {
+  margin: 2rem 0;
+  color: rgba(255, 255, 255, 0.822);
+}
+
+button {
+  user-select: none;
+  border: 0;
+  font-variant: small-caps;
+  padding: 0.5rem 1rem;
+  background-color: var(--unactiveStateColor);
+  color: white;
+  transition: 200ms;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--activeStateColor);
+  color: #000;
+}
+
+.activeSlide {
+  background-color: white;
+  transform: scale(2);
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  z-index: -1;
+  display: inline-flex;
+  transition: 700ms;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+
+.buttons {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30%;
+}
+.buttons div {
+  user-select: none;
+  margin: 0.5%;
+  width: 7px;
+  height: 7px;
+  background-color: rgba(255, 255, 255, 0.651);
+  border-radius: 50%;
+  transition: 200ms ease-in-out;
+}
+
+.welcome {
+  width: 60%;
+  margin: 2% auto;
+  text-align: center;
+}
+.welcome h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+.welcome .welcomeIntro {
+  display: flex;
+  flex-direction: row;
+  margin: 5% 0;
+}
+.welcome .welcomeIntro p {
+  padding-top: 1.25rem;
+  font-family: var(--font);
+  font-size: 1.25em;
+  color: rgba(0, 0, 0, 0.795);
+}
+
+.projectsSection {
+  font-family: var(--font);
+}
+.projectsSection h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.project:nth-child(2n + 1) {
+  background-color: rgb(228, 228, 228);
+}
+.project:nth-child(2n) {
+  background-color: rgb(201, 197, 197);
+}
+
+.project:hover,
+.project:focus {
+  background-color: var(--activeStateColor);
+}
+
+.project img {
+  width: 100%;
+}
+
+.project h3 {
+  padding: 5%;
+}
+.project p {
+  padding: 0 5%;
+  color: rgba(36, 36, 36, 0.788);
+}
+.project button {
+  width: 90%;
+  margin: 5%;
+  background-color: rgb(247, 243, 243);
+  color: black;
+}
+.project button:hover,
+button:focus {
+  background-color: var(--unactiveStateColor);
+  color: white;
+}
+.submitBtn a {
+  color: black;
+}
+.results_section {
+  margin: 5% 0;
+  font-family: var(--font);
+  text-align: center;
+}
+
+.resultsContainer {
+  width: 40%;
+  height: 300px;
+  border: solid;
+  margin: auto;
+}
+.resultsContainer h3 {
+  font-variant: small-caps;
+}
+
+.resultsContainer p:first-of-type {
+  color: rgba(88, 88, 88, 0.849);
+  margin: 5% 0;
+}
+.resultsContainer p:nth-of-type(2) {
+  line-height: 1.5rem;
+}
+
+.videoProject {
+  text-align: center;
+  font-family: var(--font);
+  background-color: var(--unactiveStateColor);
+  padding: 2rem;
+}
+
+.videoProject h1 {
+  padding-bottom: 2rem;
+  color: white;
+}
+
+.videoSlider {
+  display: flex;
+  transition: 300ms ease-in-out;
+  transform: translateX(-30%);
+  margin: 2% 0;
+}
+.videoSlider video {
+  width: 50%;
+  margin-right: 5%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.61);
+  transition: 300ms ease-in-out;
+}
+
+.videoSilderControler {
+  display: flex;
+  justify-content: center;
+}
+
+.videoSilderControler div {
+  width: 10px;
+  height: 10px;
+  margin: 2%;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.activeVideoSlide {
+  transform: scale(1.5);
+}
+.activeVideo {
+  transform: scale(1.1);
+}
+
+.contoler {
+  margin-top: 55vh;
+  display: inline-flex;
+}
+.contoler > * {
+  width: 2em;
+  cursor: pointer;
+  margin: 0 0.3rem;
+}
+.contoler > div {
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.801);
+  color: white;
+}
+
+.newsLetterSignup {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  margin: 5% 0;
+}
+.newsLetterSignup > * {
+  position: absolute;
+}
+.newsLetterSignup img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.overlayNewsLetter {
+  color: white;
+  font-family: var(--font);
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.overlayNewsLetter h1 {
+  margin: 5% auto;
+}
+.overlayNewsLetter input {
+  width: 20rem;
+  padding: 0.5rem 1rem;
+}
+
+.blogSection {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  font-family: var(--font);
+}
+
+.blogContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  margin: 2%;
+  text-align: center;
+}
+
+.calculator__form {
+  text-align: center;
+  font-size: larger;
+}
+
+.calculator__form input {
+  height: 30px;
+}
+
+.blogContainer > div {
+  width: 70%;
+  margin: 0 15%;
+}
+
+.blogContainer img {
+  width: 100%;
+  height: 30%;
+}
+.blog > * {
+  margin: 5% 0;
+}
+.blog p:first-of-type {
+  color: rgba(31, 31, 31, 0.548);
+}
+.blog button {
+  background-color: var(--unactiveStateColor);
+}
+.blog button:hover {
+  background-color: var(--activeStateColor);
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5% 0;
+  text-align: center;
+  background-color: var(--unactiveStateColor);
+}
+
+footer h3,
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-variant: small-caps;
+  margin: 2% 0;
+}
+
+footer i {
+  cursor: pointer;
+  margin: 2%;
+  user-select: none;
+}
+footer i:hover,
+footer i:active,
+footer i:focus {
+  color: white;
+}
